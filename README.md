@@ -5,9 +5,11 @@ i18n-translate-light is a light-weight translation library without any frills, f
 
 This library was built for a small, embedded JS application where code weight and load time matter.  The user's locale can be auto-detected from the browser or manually set.  Translations are resolved on a best-match basis from an exact match up the chain to the default language.
 
+The JS library is provided as a `Ruby gem` for use in Rails applications, or stand-alone as a JS file.
+
 ## Usage
 
-This gem allows loaded local translations for multiple i18n locales.  It also allows auto-detecting the active locale within the browser or manually setting it.  Translations can be looked up by keep for the best match between available translations and the user's language.
+This library loads local translations for multiple i18n locales.  It can either auto-detect the active locale within the browser (`autoDetectLocale()`) or set it manually (`setLocale()`).  Translations can be looked up by key for the best match between available translations and the user's language.
 
 Here's an example to load English (`en`) and German (`de`) translations for simple text and auto-detect user's locale.
 
@@ -45,8 +47,6 @@ Here are the following APIs for the I18NTranslateLight singleton:
 ## Installing
 
 This JS library can be used directly, or as a Rails gem.
-
-
 
 * Add to Bundler `Gemfile`:
 ```ruby
