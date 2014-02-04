@@ -1,3 +1,7 @@
+// Copyright (c) 2014 Winfield Peterson
+// http://github.com/wpeterson/i18n-translate-light
+// MIT License (See LICENSE.txt)
+
 var I18NTranslateLight = (function($) {
   this.dict             = {};
   this.defaultLocale    = 'en';
