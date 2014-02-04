@@ -1,7 +1,9 @@
 i18n-translate-light
 ====================
 
-Lightweight i18n Translation JS Library
+i18n-translate-light is a light-weight translation library without any frills, for JS apps in the browser.  This library ONLY translates strings for different locales, without providing heavy weight formatting or interpolation.  If you require number/date formatting, interpolation, or advanced features I recommend a more mature I18N library.
+
+This library was built for a small, embedded JS application where code weight and load time matter.
 
 ## Usage
 
