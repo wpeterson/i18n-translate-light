@@ -1,10 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+require 'i18n-translate-light/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "i18n-translate-light"
-  spec.version       = "0.0.1"
+  spec.version       = I18N::Translate::Light::VERSION
   spec.authors       = ["Winfield Peterson"]
   spec.email         = ["winfield.peterson@gmail.com"]
   spec.summary       = %q{Light-weight I18N Translations}
