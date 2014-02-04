@@ -3,7 +3,7 @@ i18n-translate-light
 
 i18n-translate-light is a light-weight translation library without any frills, for JS apps in the browser.  This library ONLY translates strings for different locales, without providing heavy weight formatting or interpolation.  If you require number/date formatting, interpolation, or advanced features I recommend a more mature I18N library.
 
-This library was built for a small, embedded JS application where code weight and load time matter.
+This library was built for a small, embedded JS application where code weight and load time matter.  The user's locale can be auto-detected from the browser or manually set.  Translations are resolved on a best-match basis from an exact match up the chain to the default language.
 
 ## Usage
 
