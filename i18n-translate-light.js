@@ -13,6 +13,7 @@ var I18NTranslateLight = (function($) {
 
   var autoDetectLocale = function() {
     var detectedLocale = detectBrowserLocale();
+
     this.setLocale(detectedLocale);
   };
 
@@ -22,8 +23,8 @@ var I18NTranslateLight = (function($) {
 
   var addTranslations = function(locale, data) {
     this.dict[locale] = this.dict[locale] || {};
-    //Merge data into top-level locale key
-    var deepMerge = true;
+
+    var deepMerge = true; //Merge data into top-level locale key
     this.dict[locale] = $.extend(deepMerge, {}, this.dict[locale], data);
   };
 
@@ -36,8 +37,8 @@ var I18NTranslateLight = (function($) {
 
     var defaultLocales  = parseLocale(this.defaultLocale);
     var targetLocales   = parseLocale(targetLocale);
-    var uniqueLocales   = [];
     var allLocales      = targetLocales.concat(defaultLocales);
+    var uniqueLocales   = [];
 
     $.each(allLocales, function(i, locale) {
       if ($.inArray(locale, uniqueLocales) == -1) uniqueLocales.push(locale);
@@ -47,6 +48,7 @@ var I18NTranslateLight = (function($) {
 
   var parseLocale = function(locale) {
     if (!locale) return [];
+
     var parsedLocale = locale.match(/(\w+)-(\w+)/);
     if (parsedLocale) {
       return [ parsedLocale[0], parsedLocale[1] ];
@@ -56,7 +58,6 @@ var I18NTranslateLight = (function($) {
   };
 
   var translate = function(key) {
-    //return this.dict[this.defaultLocale][key];
     for(var i=0; i < this.activeLocales.length; i++) {
       var locale = this.activeLocales[i];
       var translation = this.dict[locale] && this.dict[locale][key];
