@@ -7,9 +7,9 @@ Gem::Specification.new do |spec|
   spec.version       = "0.0.1"
   spec.authors       = ["Winfield Peterson"]
   spec.email         = ["winfield.peterson@gmail.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
-  spec.homepage      = ""
+  spec.summary       = %q{Light-weight I18N Translations}
+  spec.description   = %q{i18n-translate-light is a light-weight translation library without any frills, for JS apps in the browser.}
+  spec.homepage      = "http://github.com/wpeterson/i18n-translate-light"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
