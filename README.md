@@ -35,12 +35,10 @@ API:
 ----
 Here are the following APIs for the I18NTranslateLight singleton:
 
-* `setLocale(locale)`
-* `autoDetectLocale()`
-* `addTranslations(locale, locationHash)`
-* `translate()` / `_t()`
-
-
+* `setLocale(locale)` - Manually set active user locale string, eg: `en-US`.
+* `autoDetectLocale()` - Auto detect user locale from Browser settings, sets active locale.
+* `addTranslations(locale, locationHash)` - Add a translations for locale (eg: `en-US`) as a hash of key/string pairs (eg: `{ "ui.dialog.cancel": "Cancel" }`)
+* `translate(key)` / `_t(key)` - Return translated text for key
 
 
 ## Contributing
