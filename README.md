@@ -42,6 +42,25 @@ Here are the following APIs for the I18NTranslateLight singleton:
 * `addTranslations(locale, locationHash)` - Add a translations for locale (eg: `en-US`) as a hash of key/string pairs (eg: `{ "ui.dialog.cancel": "Cancel" }`)
 * `translate(key)` / `_t(key)` - Return translated text for key
 
+## Installing
+
+This JS library can be used directly, or as a Rails gem.
+
+
+
+* Add to Bundler `Gemfile`:
+```ruby
+gem "i18n-translate-light"
+```
+* Install as a Ruby gem directly:
+```bash
+> gem install i18n-translate-light
+```
+* Download JS file directly:
+```bash
+> cd lib/assets/javascripts # Rails JS assets directory
+> wget "https://raw2.github.com/wpeterson/i18n-translate-light/master/i18n-translate-light.js"
+```
 
 ## Contributing
 
