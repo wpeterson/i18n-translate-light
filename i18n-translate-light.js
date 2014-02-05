@@ -5,9 +5,11 @@
 var I18NTranslateLight = (function($) {
   this.dict             = {};
   this.defaultLocale    = 'en';
+  this.userLocale       = this.defaultLocale;
   this.activeLocales    = [ this.defaultLocale ];
 
   var setLocale = function(locale) {
+    this.userLocale    = locale;
     this.activeLocales = expandLocales(locale);
   };
 
@@ -75,6 +77,7 @@ var I18NTranslateLight = (function($) {
     dict:                 this.dict,
     activeLocales:        this.activeLocales,
     defaultLocale:        this.defaultLocale,
+    userLocale:           this.userLocale,
     resetDict:            function() { this.dict = {}; },
     detectBrowserLocale:  detectBrowserLocale,
     setLocale:            setLocale,

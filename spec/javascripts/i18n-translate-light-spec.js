@@ -94,6 +94,15 @@ describe("I18NTranslateLight", function() {
       I18NTranslateLight.setLocale('es-ES');
       expect(I18NTranslateLight.activeLocales).toEqual([ 'es-ES', 'es', 'en' ]);
     });
+
+    it("should set userLocale", function() {
+      I18NTranslateLight.setLocale('en');
+
+      expect(I18NTranslateLight.userLocale).toEqual('en');
+
+      I18NTranslateLight.setLocale('es-ES');
+      expect(I18NTranslateLight.userLocale).toEqual('es-ES');
+    });
   });
 
   describe("translate", function() {
