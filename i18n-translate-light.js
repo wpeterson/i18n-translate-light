@@ -13,6 +13,11 @@ var I18NTranslateLight = (function($) {
     this.activeLocales = expandLocales(locale);
   };
 
+  var getLocale = function(locale) {
+    // Return a copy of translations for this locale
+    return $.extend({}, this.dict[locale]);
+  };
+
   var autoDetectLocale = function() {
     var detectedLocale = detectBrowserLocale();
 
@@ -81,6 +86,7 @@ var I18NTranslateLight = (function($) {
     resetDict:            function() { this.dict = {}; },
     detectBrowserLocale:  detectBrowserLocale,
     setLocale:            setLocale,
+    getLocale:            getLocale,
     autoDetectLocale:     autoDetectLocale,
     expandLocales:        expandLocales,
     parseLocale:          parseLocale,

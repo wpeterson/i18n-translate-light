@@ -135,4 +135,17 @@ describe("I18NTranslateLight", function() {
     });
 
   });
+
+
+  describe("getLocale", function() {
+    it("should return locale dict", function() {
+      var expected = { 'oh': 'yeah '};
+      I18NTranslateLight.resetDict();
+      expect(I18NTranslateLight.dict).toEqual({});
+
+      I18NTranslateLight.addTranslations( 'en', expected );
+      expect(I18NTranslateLight.dict).toEqual({ 'en': expected });
+    });
+  });
+
 });
