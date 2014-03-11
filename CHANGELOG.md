@@ -1,6 +1,11 @@
 i18n-translate-light Changelog
 ==============================
 
+# 0.0.4
+
+* Feature: Adds `I18NTranslateLight.getLocale()` API
+
+
 # 0.0.3
 
 * Feature: Adds `I18NTranslateLight.userlocale` property
